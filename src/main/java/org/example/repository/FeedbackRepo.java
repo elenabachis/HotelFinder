@@ -18,8 +18,8 @@ public class FeedbackRepo {
     public void createFeedback(Feedback feedback) {
         try (Connection connection = DriverManager.getConnection(DbConfigurator.URL, DbConfigurator.USERNAME, DbConfigurator.PASSWORD);
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_FEEDBACK_SQL)) {
-            preparedStatement.setInt(1, feedback.getUserId());
-            preparedStatement.setInt(2, feedback.getHotelId());
+            preparedStatement.setInt(1, feedback.getid());
+            preparedStatement.setInt(2, feedback.getid());
             preparedStatement.setInt(3, feedback.getServicesRating());
             preparedStatement.setInt(4, feedback.getCleanlinessRating());
             preparedStatement.setString(5, feedback.getComments());

@@ -1,34 +1,34 @@
 package org.example.model;
 
 public class Feedback {
-    private int userId;
-    private int hotelId;
+    private int id;
+    private int reservation_id;
     private int servicesRating;
     private int cleanlinessRating;
     private String comments;
 
-    public Feedback(int userId, int hotelId, int servicesRating, int cleanlinessRating, String comments) {
-        this.userId = userId;
-        this.hotelId = hotelId;
+    public Feedback(int id, int reservation_id, int servicesRating, int cleanlinessRating, String comments) {
+        this.id = reservation_id;
+        this.reservation_id = reservation_id;
         this.servicesRating = servicesRating;
         this.cleanlinessRating = cleanlinessRating;
         this.comments = comments;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getId() {
+        return id;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setid(int id) {
+        this.id = id;
     }
 
-    public int getHotelId() {
-        return hotelId;
+    public int getid() {
+        return reservation_id;
     }
 
-    public void setHotelId(int hotelId) {
-        this.hotelId = hotelId;
+    public void setreservation_id(int reservation_id) {
+        this.reservation_id = reservation_id;
     }
 
     public int getServicesRating() {
@@ -58,8 +58,8 @@ public class Feedback {
     @Override
     public String toString() {
         return "Feedback{" +
-                "userId=" + userId +
-                ", hotelId=" + hotelId +
+                "id=" + id +
+                ", reservation_id=" + reservation_id +
                 ", servicesRating=" + servicesRating +
                 ", cleanlinessRating=" + cleanlinessRating +
                 ", comments='" + comments + '\'' +
